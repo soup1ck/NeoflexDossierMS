@@ -1,0 +1,11 @@
+server:
+  port: 8083
+spring:
+  kafka:
+    consumer:
+      group-id: notificationId
+      properties:
+        spring:
+          json:
+            type:
+              mapping: EmailMessageDTO:ru.neoflex.dossier.data.dto.EmailMessageDTO
