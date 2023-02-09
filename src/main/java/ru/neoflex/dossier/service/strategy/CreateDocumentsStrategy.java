@@ -15,6 +15,10 @@ public class CreateDocumentsStrategy implements EmailSendStrategy {
 
     private final JavaMailSender javaMailSender;
 
+    /**
+     * @param emailMessageDTO - сообщение от deal
+     * Метод отправляет письмо на почту по теме CREATE_DOCUMENT
+     */
     @Override
     public void sendMail(EmailMessageDTO emailMessageDTO) {
 

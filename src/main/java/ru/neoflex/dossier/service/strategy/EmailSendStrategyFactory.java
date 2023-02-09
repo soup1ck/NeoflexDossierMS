@@ -22,6 +22,11 @@ public class EmailSendStrategyFactory {
         return strategies.get(theme);
     }
 
+    /**
+     * @param strategySet - set для реализации паттерна стратегия, для отправки сообщений
+     * в strategySet кладется hashMap с ключом Theme и значением EmailSendStrategy, отнаследованных от данного
+     * интерфейса
+     */
     private void createStrategy(Set<EmailSendStrategy> strategySet) {
         strategies = new HashMap<>();
         strategySet.forEach(

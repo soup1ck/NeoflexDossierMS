@@ -20,6 +20,11 @@ public class FileService {
     private final CreditMapper creditMapper;
     private final ClientMapper clientMapper;
 
+    /**
+     * @param application - предложение полученное из deal
+     * @return file - с информацией о кредите
+     * @throws IOException - ошибки формирования файла
+     */
     public File createCreditFile(Application application) throws IOException {
         File file = new File("credit_document.txt");
         Credit credit = application.getCredit();
@@ -31,6 +36,11 @@ public class FileService {
         return file;
     }
 
+    /**
+     * @param application - предложение полученное из deal
+     * @return file - с информацией о клиенте
+     * @throws IOException - ошибки формирования файла
+     */
     public File createClientFile(Application application) throws IOException {
         File file = new File("client_document.txt");
         Client client = application.getClient();

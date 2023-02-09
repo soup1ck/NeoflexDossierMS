@@ -12,6 +12,12 @@ public class EmailServiceImpl implements EmailService {
 
     private final EmailSendStrategyFactory emailSendStrategyFactory;
 
+    /**
+     * @param emailMessageDTO - сообщение полученное из deal
+     * Метод на основе полученного сообщения, с помощью фабрики EmailSendStrategyFactory,
+     * по полученной теме выбирает стратегию отправки сообшения, после чего по выбранной стратегии сообщение
+     * отправляется на почту
+     */
     @Override
     public void sendMessage(EmailMessageDTO emailMessageDTO) {
         EmailSendStrategy emailSendStrategy = emailSendStrategyFactory

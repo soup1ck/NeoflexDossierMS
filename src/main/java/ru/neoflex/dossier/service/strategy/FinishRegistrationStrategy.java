@@ -15,6 +15,10 @@ public class FinishRegistrationStrategy implements EmailSendStrategy {
 
     private final JavaMailSender javaMailSender;
 
+    /**
+     * @param emailMessageDTO - сообщение от deal
+     * Метод отправляет письмо на почту по теме FINISH_REGISTRATION
+     */
     @Override
     public void sendMail(EmailMessageDTO emailMessageDTO) {
         try {

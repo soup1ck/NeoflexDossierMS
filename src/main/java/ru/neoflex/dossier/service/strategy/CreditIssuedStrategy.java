@@ -15,6 +15,10 @@ public class CreditIssuedStrategy implements EmailSendStrategy {
 
     private final JavaMailSender javaMailSender;
 
+    /**
+     * @param emailMessageDTO - сообщение от deal
+     * Метод отправляет письмо на почту по теме CREDIT_ISSUED
+     */
     @Override
     public void sendMail(EmailMessageDTO emailMessageDTO) {
 

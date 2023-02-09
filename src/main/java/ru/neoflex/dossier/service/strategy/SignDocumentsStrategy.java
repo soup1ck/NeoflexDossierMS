@@ -18,6 +18,11 @@ public class SignDocumentsStrategy implements EmailSendStrategy {
     private final JavaMailSender javaMailSender;
     private final FeignCustomClient feignCustomClient;
 
+    /**
+     * @param emailMessageDTO - сообщение от deal
+     * Метод отправляет письмо на почту по теме SIGN_DOCUMENTS_WITH_SES_CODE,
+     * feignCustomClient получает Application из deal
+     */
     @Override
     public void sendMail(EmailMessageDTO emailMessageDTO) {
 

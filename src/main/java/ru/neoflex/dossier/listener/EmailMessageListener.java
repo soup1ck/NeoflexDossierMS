@@ -22,6 +22,8 @@ public class EmailMessageListener {
                     "send-ses",
                     "credit-issued"})
     public void finishRegistrationListener(@Payload EmailMessageDTO emailMessageDTO) {
+        log.info("Сообщение от deal: {}", emailMessageDTO.toString());
         emailServiceImpl.sendMessage(emailMessageDTO);
+        log.info("Письмо отправлено");
     }
 }

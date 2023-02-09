@@ -25,6 +25,12 @@ public class SendDocumentsStrategy implements EmailSendStrategy {
     private final FeignCustomClient feignCustomClient;
     private final FileService fileService;
 
+    /**
+     * @param emailMessageDTO - сообщение от deal
+     * Метод отправляет письмо на почту по теме YOUR_LOAN_DOCUMENTS,
+     * Также с помощью fileService формируются документы для отправки, а с помощью
+     * feignCustomClient получает Application из deal
+     */
     @Override
     public void sendMail(EmailMessageDTO emailMessageDTO) {
 
